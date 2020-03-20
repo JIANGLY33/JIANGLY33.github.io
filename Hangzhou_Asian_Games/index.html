@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home</title>
+	<!-- custom-theme -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content=""
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //custom-theme -->
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- popup css -->
+	<link href="css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- count down css -->
+	<link rel="stylesheet" href='css/dscountdown.css' type='text/css' media='all' />
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+	<div class="agile-main-grid">
+		<div class="left-grid text-center" data-vide-bg="video/bg">
+			<div class="center-container">
+				<img src="images/0.png" height =130 width=130 alt="" />
+				<h1 class="title-head-w3l text-center">Heart to heart @Future</h1>
+
+				<h2>2022年杭州亚运会</h2>
+				<span>welcome to Hangzhou</span>
+
+				<div class="content2">
+
+					<ul>
+						<li>
+							<a class="book popup-with-zoom-anim" href="#small-dialog">通知</a>
+						</li>
+					</ul>
+				</div 
+				<div class="pop-up">
+					<div id="small-dialog" class="mfp-hide subscribe-form">
+						<h3 class="sub-head text-center">我们将定时为您推送杭州亚运会相关消息</h3>
+						<form action="#" method="post">
+							<div class="icon">
+								<span class="fa fa-user" aria-hidden="true"></span>
+								<input type="text" class="user" name="username" placeholder="用户名" required="" />
+							</div>
+							<div class="icon">
+								<span class="fa fa-envelope-o" aria-hidden="true"></span>
+								<input type="email" name="Email" class="email" placeholder="邮箱" required="" />
+							</div>
+							<input type="submit" value="订阅">
+						</form>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<div class="wthree-right-grid">
+			<h3 class="txt  text-center">离杭州亚运会开幕还有</h3>
+			<div class="demo2"></div>
+			<div class="clear"></div>
+			<div class="img-grid">
+				<div class="img-txt">
+					<h4>美丽天城 品质杭州</h4>
+					<h5 class="txt">东南形胜，三吴都会，钱塘自古繁华。有着2200多年历史的杭州，是中国七大古都之一。<br/>亚运会，欢迎来到杭州！ </h5>
+					<p> Hangzhou，Living Poetry.</p>
+				</div>
+				<div class="img-left">
+					<img src="images/3.png" height=130 width=130 alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<!-- Counter  -->
+	<script src="js/dscountdown.min.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$('.demo2').dsCountDown({
+				endDate: new Date("September 10, 2022 20:22:00"),
+				theme: 'black'
+			});
+		});
+	</script>
+	<!-- //Counter required files -->
+
+	<!-- video js -->
+	<script src="js/jquery.vide.min.js"></script>
+	<!--popup-js-->
+	<script src="js/jquery.magnific-popup.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+
+
+</body>
+
+</html>
