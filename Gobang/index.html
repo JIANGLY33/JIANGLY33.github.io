@@ -183,17 +183,18 @@
 		var grid;
 		var chessArr = [];
 		var timer = 0;
-		var lineNum = parseInt(gridNum.innerHTML);
+		var lineNum = parseInt(gridNum.innerHTML); //获取棋盘大小
 		var box = document.getElementById('chessboard');
 		var chessBox = box.getElementsByTagName('div');
 		var submitBtn = document.getElementById('submitBtn');
-
+		//点击减小按钮，调整棋盘大小，最小为8
 		subBtn.onclick = function(){
 			if ( lineNum > 8 ) {
 				lineNum--;
 			}
 			gridNum.innerHTML = lineNum;
 		}
+		//点击增大按钮，调整棋盘大小，最大为14
 		addBtn.onclick = function(){
 			if ( lineNum < 14 ) {
 				lineNum++;
@@ -205,13 +206,14 @@
 		submitBtn.onclick = function(){
 			var chessMaxNum = lineNum * lineNum;
 			var chessWH = 90/lineNum;
+			//对棋盘上的每个位置进行初始化
 			for (var i = 0; i < chessMaxNum; i++) {
 				grid = document.createElement('div');
 				grid.style.width = 'calc(' + chessWH + 'vmin - 2px)';
 				grid.style.height = 'calc(' + chessWH + 'vmin - 2px)';
 				grid.id=i;
 				box.appendChild(grid);
-				chessArr[i] = 0;
+				chessArr[i] = 0;  //0表示该位置没有棋子
 
 				grid.onclick = function(x){
 					var index = x.target.id||x.target.parentNode.id;
@@ -283,7 +285,7 @@
 			if(chessArr[i] == 0){
 				timer++;
 				chessArr[i] = new Chess();
-				timer%2==0?chessArr[i].color = 'black':chessArr[i].color = 'white';
+				timer%2==0?chessArr[i].color = 'black':chessArr[i].color = 'white'; //通过计步器来判断新棋子为白或黑
 				chessArr[i].site = i;
 				chessBox[i].appendChild(chessArr[i].chessDom());
 				chessArr[i].ligature(chessArr);
